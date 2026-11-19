@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shubham Kumar – Technical Support to Business Development</title>
+<meta name="description" content="Portfolio of Shubham Kumar: technical support professional with a BCA, moving into business development in Noida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF7FC;--surface:#FFFFFF;--ink:#2A1B3D;--muted:#5E5472;--line:#E3DAEE;--accent:#7B3FE4;--gold:#D9483B;--hero:#1A0B2E;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#140A26;--surface:#1E1236;--ink:#F4EEFF;--muted:#BBAED6;--line:#3B2A5E;--accent:#B794FF;--gold:#FF8A6B;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#140A26;--surface:#1E1236;--ink:#F4EEFF;--muted:#BBAED6;--line:#3B2A5E;--accent:#B794FF;--gold:#FF8A6B;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.08;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* hero */
+.hero{position:relative;min-height:100svh;background:radial-gradient(ellipse at 70% 40%,#4A1F7A 0%,var(--hero) 60%);color:#F4EEFF;overflow:hidden;display:flex;flex-direction:column}
+#stage{position:absolute;inset:0;width:100%;height:100%;display:block}
+.top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:22px 24px;max-width:1080px;width:100%;margin:0 auto}
+.top b{font-family:"Bricolage Grotesque",sans-serif;font-size:19px}
+.top nav{display:flex;gap:20px;font-size:15px}
+.top nav a{text-decoration:none;opacity:.8}.top nav a:hover{opacity:1}
+.heroText{position:relative;z-index:2;margin:auto auto 9vh;max-width:1080px;width:100%;padding:0 24px;pointer-events:none}
+.heroText>*{pointer-events:auto}
+.heroText h1{font-size:clamp(58px,13vw,150px);font-weight:800;letter-spacing:-.035em;line-height:.93}
+.heroText h1 span{display:block;width:fit-content;opacity:0;transform:translateY(40px);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.heroText h1 span:nth-child(2){animation-delay:.15s}
+.heroText p{max-width:520px;font-size:clamp(16px,2vw,19px);margin:14px 0 28px;color:#DCCFF5;opacity:0;animation:rise .9s .45s cubic-bezier(.2,.8,.2,1) forwards}
+.btns{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:rise .9s .6s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.p{background:#FF7A59;color:#1A0B2E}.btn.s{border:1.5px solid #8a74b8;color:#F4EEFF}
+.btn:hover{transform:translateY(-2px)}
+.hint{position:absolute;z-index:2;right:24px;bottom:18px;font-size:13px;color:#B7A5DB}
+/* sections */
+section{padding:96px 0}
+.sec h2{font-size:clamp(32px,5vw,52px);margin-bottom:18px;letter-spacing:-.02em}
+.lead{max-width:680px;color:var(--muted);font-size:19px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}
+.facts{display:grid;gap:14px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.fact small{color:var(--muted);display:block}
+/* funnel explainer */
+.bd{background:var(--surface);border-block:1px solid var(--line)}
+.fun{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;margin-top:36px;align-items:center}
+.stack{display:grid;gap:8px;justify-items:center}
+.stage{width:var(--w);border:0;border-radius:10px;padding:14px 10px;font:600 16px "Instrument Sans",sans-serif;cursor:pointer;color:#1A0B2E;background:var(--c);transition:transform .25s,box-shadow .25s}
+.stage:hover{transform:scale(1.03)}
+.stage[aria-pressed="true"]{box-shadow:0 0 0 3px var(--ink);transform:scale(1.05)}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:28px;min-height:230px}
+.panel h3{font-size:28px;margin-bottom:10px}
+.panel .mine{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);color:var(--muted)}
+.panel .mine b{color:var(--accent)}
+.map{margin-top:56px;display:grid;gap:10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row div{padding:14px 18px;border-radius:12px;border:1px solid var(--line);background:var(--bg)}
+.row div:last-child{border-color:var(--accent)}
+.row.h div{background:none;border:0;font:700 14px "Bricolage Grotesque",sans-serif;color:var(--muted);padding:0 18px}
+/* timeline */
+.tl{margin-top:34px;border-left:2px solid var(--line);padding-left:28px;display:grid;gap:36px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-37px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--gold)}
+.job h3{font-size:24px}
+.job .meta{color:var(--muted);margin:4px 0 12px}
+.job ul{margin:0;padding-left:20px;display:grid;gap:8px;max-width:760px}
+/* skills */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:34px;perspective:900px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .15s ease-out,box-shadow .3s;transform-style:preserve-3d;will-change:transform}
+.card:hover{box-shadow:0 18px 40px rgba(60,20,110,.22)}
+.card h3{font-size:20px;margin-bottom:12px;transform:translateZ(30px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;transform:translateZ(18px)}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px;background:var(--bg)}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:30px}
+.contact{background:var(--hero);color:#F4EEFF;text-align:center}
+.contact h2{margin-inline:auto;max-width:640px}
+.contact .lead{margin:0 auto 28px;color:#DCCFF5}
+.links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{padding:24px;text-align:center;color:var(--muted);font-size:14px}
+#progress{position:fixed;left:0;top:0;height:3px;width:100%;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#B794FF,#FF7A59);z-index:50}
+.top button{background:none;border:1.5px solid #8a74b8;color:#F4EEFF;border-radius:999px;padding:4px 14px;font:500 14px "Instrument Sans",sans-serif;cursor:pointer}
+.top nav{align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.pl{margin:0;color:var(--muted);transform:translateZ(18px)}
+.btn.s:hover{background:rgba(255,255,255,.1)}
+.hero{background-color:#1A0B2E}
+.btn.p:hover{box-shadow:0 8px 24px rgba(242,178,58,.35)}
+.hi{font:600 clamp(16px,2vw,20px) "Instrument Sans",sans-serif;color:#FFB59E;margin-bottom:10px;opacity:0;animation:rise .8s forwards}
+.heroText h1.name span{background:linear-gradient(100deg,#fff 0%,#FFD2B8 28%,#FF8A6B 52%,#C79BFF 78%,#fff 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(255,120,100,.35));padding-bottom:.06em;animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards,shimmer 7s linear infinite}
+@keyframes shimmer{to{background-position:-220% center}}
+.role{font:500 clamp(18px,2.6vw,26px) "Bricolage Grotesque",sans-serif;margin-top:18px;color:#E6D9FF;opacity:0;animation:rise .9s .35s cubic-bezier(.2,.8,.2,1) forwards}
+@media (max-width:820px){.about,.fun{grid-template-columns:1fr}.top nav{gap:12px;font-size:14px}.row{grid-template-columns:1fr}.row.h{display:none}section{padding:68px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.heroText h1 span,.heroText p,.btns{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<header class="hero" id="top">
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div class="top"><b>Shubham Kumar</b><nav aria-label="Sections"><a href="#bd">BD journey</a><a href="#plan">30-day plan</a><a href="#work">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a><button type="button" id="themeBtn" aria-label="Switch light or dark theme">Theme</button></nav></div>
+  <div class="heroText">
+    <div class="hi">Hello, I’m</div><h1 class="name"><span>Shubham</span><span>Kumar</span></h1><div class="role">Fixing problems. Now winning customers.</div>
+    <p>Technical support professional with a BCA and hands-on L1/L2 experience, moving into business development in Noida.</p>
+    <div class="btns"><a class="btn p" href="#contact">Get in touch</a><a class="btn s" href="#bd">See how support becomes sales</a><a class="btn s" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+  <div class="hint">Move your pointer to spin the network</div>
+</header>
+
+<main>
+<section class="sec" id="about"><div class="wrap about">
+  <div>
+    <h2>I listen first, then solve.</h2>
+    <p class="lead">I have spent my career diagnosing software and API issues, logging tickets within SLAs, and helping people by phone and email. I write clear resolution guides and stay calm when a customer is stuck. Business development uses the same habits: understand the problem, explain the answer, follow up.</p>
+  </div>
+  <div class="facts">
+    <div class="fact"><small>Based in</small>Noida, Uttar Pradesh</div>
+    <div class="fact"><small>Education</small>BCA, Maharaja Agrasen Himalayan Garhwal University</div>
+    <div class="fact"><small>Latest role</small>Telesales &amp; Process Executive, Cogent E Services</div>
+  </div>
+</div></section>
+
+<section class="sec bd" id="bd"><div class="wrap">
+  <h2>What a Business Development Executive does</h2>
+  <p class="lead">A BDE finds new customers and grows revenue. Every deal moves through a funnel. Select a stage to see what happens there and what I already bring to it.</p>
+  <div class="fun">
+    <div class="stack" role="group" aria-label="Sales funnel stages" id="stack"></div>
+    <div class="panel" id="panel" aria-live="polite"></div>
+  </div>
+  <div class="map">
+    <div class="row h"><div>What a BDE does</div><div>What I already do</div></div>
+    <div class="row"><div>Discovers the customer’s real problem</div><div>Diagnoses user issues by phone and applies root cause analysis</div></div>
+    <div class="row"><div>Handles objections calmly</div><div>Resolves booking and account queries for frustrated callers</div></div>
+    <div class="row"><div>Follows up and records every touchpoint</div><div>Logs interactions in CRM platforms and meets response SLAs</div></div>
+    <div class="row"><div>Explains a product in plain language</div><div>Guides customers through services and writes step-by-step resolution guides</div></div>
+    <div class="row"><div>Speaks to technical buyers</div><div>Works with Java, REST APIs, SQL and MongoDB, so IT and software clients are familiar ground</div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="plan"><div class="wrap">
+  <h2>My first 30 days as a BDE</h2>
+  <p class="lead">A new hire who arrives with a plan ramps up faster. This is how I would spend the first month.</p>
+  <div class="cards">
+    <div class="card"><h3>Week 1: Learn</h3><p class="pl">Study the product, the pricing and the best customers. Sit in on calls, read past deals and learn why customers said yes or no.</p></div>
+    <div class="card"><h3>Week 2: Prepare</h3><p class="pl">Build a target list of 50 companies, write email and call scripts, and set up a clean CRM routine.</p></div>
+    <div class="card"><h3>Weeks 3-4: Reach out</h3><p class="pl">Start daily calls, emails and LinkedIn messages. Log every touchpoint and follow up at least five times.</p></div>
+    <div class="card"><h3>Day 30: Review</h3><p class="pl">Share my numbers with my manager: calls, meetings booked and what worked. Then adjust the plan.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="work"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="tl">
+    <div class="job"><h3>Telesales &amp; Process Executive</h3><div class="meta">Cogent E Services (Tata 1mg process) · Mar 2026 – Oct 2026</div>
+      <ul><li>Delivered frontline customer support, handling queries by phone and guiding customers through health service bookings and portal navigation.</li>
+      <li>Resolved client technical queries, system booking issues and account inquiries over telephone and CRM channels.</li>
+      <li>Logged detailed customer interaction tickets and tracked data in CRM platforms while meeting response SLAs.</li></ul></div>
+    <div class="job"><h3>IT Support &amp; Web Development Intern</h3><div class="meta">Silverwink IT Solutions · Sep 2024 – Jan 2025</div>
+      <ul><li>Provided L1/L2 technical support and troubleshooting for web applications built with Java, Spring Boot, React.js, Node.js and MongoDB.</li>
+      <li>Diagnosed and resolved frontend and backend API integration issues, keeping user workflows and system performance uninterrupted.</li>
+      <li>Managed MongoDB queries and CRUD operations to resolve data inconsistency reports and support application maintenance.</li>
+      <li>Used Git/GitHub for version control, software updates, deployment verification and tracking technical issues.</li>
+      <li>Documented system workflows, common issues and step-by-step resolution guides for team members and internal users.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec" id="skills" style="padding-top:0"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="cards" id="cards">
+    <div class="card"><h3>Technical support</h3><div class="chips"><span>L1/L2 support</span><span>Troubleshooting</span><span>Root cause analysis</span><span>Incident logging</span><span>Ticket tracking</span><span>SLA adherence</span><span>User training</span></div></div>
+    <div class="card"><h3>Systems and tools</h3><div class="chips"><span>Windows</span><span>System configuration</span><span>CRM platforms</span><span>MS Office</span><span>Git/GitHub</span></div></div>
+    <div class="card"><h3>Web and programming</h3><div class="chips"><span>Java</span><span>Spring Boot</span><span>React.js</span><span>Node.js</span><span>HTML/CSS</span><span>REST API debugging</span></div></div>
+    <div class="card"><h3>Databases</h3><div class="chips"><span>MongoDB</span><span>SQL queries</span><span>CRUD operations</span></div></div>
+    <div class="card"><h3>Professional</h3><div class="chips"><span>Customer service</span><span>Written and verbal communication</span><span>Problem-solving</span><span>Documentation</span><span>Teamwork</span></div></div>
+  </div>
+  <div class="edu">
+    <div class="fact"><small>2021 – 2024</small><b>Bachelor of Computer Applications</b><br>Maharaja Agrasen Himalayan Garhwal University</div>
+    <div class="fact"><small>2019 – 2020</small><b>Intermediate (Science)</b><br>K.L. Janta Inter College, Deoband</div>
+  </div>
+</div></section>
+
+<section class="sec contact" id="contact"><div class="wrap">
+  <h2>Let’s talk about your next customer.</h2>
+  <p class="lead">I am open to business development and technical support roles in Noida and nearby.</p>
+  <div class="links"><a class="btn p" href="mailto:workwithshub111@gmail.com">workwithshub111@gmail.com</a><a class="btn s" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn s" href="tel:+919149327147">+91 91493 27147</a></div>
+</div></section>
+</main>
+<footer>© Shubham Kumar</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var canvas=document.getElementById("stage"),hero=document.querySelector(".hero");
+  var renderer;
+  try{renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});}catch(e){canvas.style.display="none";return;}
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  var scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(45,1,.1,60);
+  var group=new THREE.Group();scene.add(group);
+  var R=2.4,NN=window.innerWidth<700?70:120,nodes=[],i,j,k;
+  for(i=0;i<NN;i++){var y=1-(i/(NN-1))*2,r=Math.sqrt(1-y*y),th=i*2.399963;nodes.push(new THREE.Vector3(Math.cos(th)*r*R,y*R,Math.sin(th)*r*R));}
+  var np=new Float32Array(NN*3),nc=new Float32Array(NN*3),pal=[[.72,.58,1],[1,.54,.42],[1,.85,.7]];
+  for(i=0;i<NN;i++){np[i*3]=nodes[i].x;np[i*3+1]=nodes[i].y;np[i*3+2]=nodes[i].z;var c=pal[i%7===0?1:(i%3===0?2:0)];nc[i*3]=c[0];nc[i*3+1]=c[1];nc[i*3+2]=c[2];}
+  var ng=new THREE.BufferGeometry();
+  ng.setAttribute("position",new THREE.BufferAttribute(np,3));ng.setAttribute("color",new THREE.BufferAttribute(nc,3));
+  group.add(new THREE.Points(ng,new THREE.PointsMaterial({size:.15,vertexColors:true,transparent:true,opacity:.95,blending:THREE.AdditiveBlending,depthWrite:false})));
+  var links=[],seen={},lp=[];
+  for(i=0;i<NN;i++){
+    var d=[];for(j=0;j<NN;j++){if(j!==i)d.push([nodes[i].distanceToSquared(nodes[j]),j]);}
+    d.sort(function(x,y){return x[0]-y[0];});
+    for(k=0;k<3;k++){var q=d[k][1],key=Math.min(i,q)+"-"+Math.max(i,q);
+      if(!seen[key]){seen[key]=1;links.push([i,q]);lp.push(nodes[i].x,nodes[i].y,nodes[i].z,nodes[q].x,nodes[q].y,nodes[q].z);}}
+  }
+  var lg=new THREE.BufferGeometry();lg.setAttribute("position",new THREE.Float32BufferAttribute(lp,3));
+  group.add(new THREE.LineSegments(lg,new THREE.LineBasicMaterial({color:0xB794FF,transparent:true,opacity:.38})));
+  group.add(new THREE.Mesh(new THREE.IcosahedronGeometry(R*.97,2),new THREE.MeshBasicMaterial({color:0x7a52c8,wireframe:true,transparent:true,opacity:.13})));
+  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(.6,1),new THREE.MeshBasicMaterial({color:0xFF7A59,wireframe:true}));
+  group.add(core);
+  var rings=[];
+  [[1.45,.5,0],[1.7,-.9,.6]].forEach(function(v){
+    var m=new THREE.Mesh(new THREE.TorusGeometry(R*v[0]*.95,.013,8,140),new THREE.MeshBasicMaterial({color:v[1]>0?0xFFB59E:0xC79BFF,transparent:true,opacity:.4}));
+    m.rotation.x=1.2+v[1]*.3;m.rotation.y=v[2];group.add(m);rings.push(m);
+  });
+  var PN=40,pl=[],pt=[],ps=[],pp=new Float32Array(PN*3);
+  for(i=0;i<PN;i++){pl.push(Math.floor(Math.random()*links.length));pt.push(Math.random());ps.push(.25+Math.random()*.5);}
+  var pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pp,3));
+  group.add(new THREE.Points(pg,new THREE.PointsMaterial({size:.2,color:0xFFC2A8,transparent:true,opacity:.95,blending:THREE.AdditiveBlending,depthWrite:false})));
+  function pulses(dt){
+    for(var i=0;i<PN;i++){
+      pt[i]+=ps[i]*dt;if(pt[i]>1){pt[i]=0;pl[i]=Math.floor(Math.random()*links.length);}
+      var a=nodes[links[pl[i]][0]],b=nodes[links[pl[i]][1]],t=pt[i];
+      pp[i*3]=a.x+(b.x-a.x)*t;pp[i*3+1]=a.y+(b.y-a.y)*t;pp[i*3+2]=a.z+(b.z-a.z)*t;
+    }
+    pg.attributes.position.needsUpdate=true;
+  }
+  var tx=0,ty=0,px=0,py=0;
+  hero.addEventListener("pointermove",function(e){var r=hero.getBoundingClientRect();px=((e.clientX-r.left)/r.width-.5);py=((e.clientY-r.top)/r.height-.5);});
+  function size(){var w=hero.clientWidth,h=hero.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
+    if(w<820){camera.position.set(0,0,13.5);group.position.set(0,2.4,0);}else{camera.position.set(0,0,10);group.position.set(2.7,0,0);}
+    camera.lookAt(group.position.x*.25,group.position.y*.4,0);camera.updateProjectionMatrix();}
+  size();window.addEventListener("resize",size);
+  var visible=true,last=performance.now(),spin=0;
+  new IntersectionObserver(function(e){visible=e[0].isIntersecting;}).observe(hero);
+  function frame(now){
+    requestAnimationFrame(frame);
+    if(!visible)return;
+    var dt=Math.min((now-last)/1000,.05);last=now;
+    pulses(dt);spin+=dt*.2;
+    tx+=(px*1.4-tx)*.05;ty+=(py*.7-ty)*.05;
+    group.rotation.y=spin+tx;
+    group.rotation.x=.25+ty+Math.min(window.scrollY/1000,.4);
+    core.rotation.y+=dt*1.2;core.rotation.x+=dt*.7;
+    rings[0].rotation.z+=dt*.35;rings[1].rotation.z-=dt*.25;
+    renderer.render(scene,camera);
+  }
+  if(reduce){pulses(.1);renderer.render(scene,camera);}else{requestAnimationFrame(frame);}
+})();
+
+/* funnel explainer */
+.bd{background:var(--surface);border-block:1px solid var(--line)}
+.fun{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;margin-top:36px;align-items:center}
+.stack{display:grid;gap:8px;justify-items:center}
+.stage{width:var(--w);border:0;border-radius:10px;padding:14px 10px;font:600 16px "Instrument Sans",sans-serif;cursor:pointer;color:#1A0B2E;background:var(--c);transition:transform .25s,box-shadow .25s}
+.stage:hover{transform:scale(1.03)}
+.stage[aria-pressed="true"]{box-shadow:0 0 0 3px var(--ink);transform:scale(1.05)}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:28px;min-height:230px}
+.panel h3{font-size:28px;margin-bottom:10px}
+.panel .mine{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);color:var(--muted)}
+.panel .mine b{color:var(--accent)}
+.map{margin-top:56px;display:grid;gap:10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row div{padding:14px 18px;border-radius:12px;border:1px solid var(--line);background:var(--bg)}
+.row div:last-child{border-color:var(--accent)}
+.row.h div{background:none;border:0;font:700 14px "Bricolage Grotesque",sans-serif;color:var(--muted);padding:0 18px}
+/* timeline */
+.tl{margin-top:34px;border-left:2px solid var(--line);padding-left:28px;display:grid;gap:36px}
+.job{position:relative}
+.job::before{content:"";position:absolute;left:-37px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--gold)}
+.job h3{font-size:24px}
+.job .meta{color:var(--muted);margin:4px 0 12px}
+.job ul{margin:0;padding-left:20px;display:grid;gap:8px;max-width:760px}
+/* skills */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:34px;perspective:900px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .15s ease-out,box-shadow .3s;transform-style:preserve-3d;will-change:transform}
+.card:hover{box-shadow:0 18px 40px rgba(60,20,110,.22)}
+.card h3{font-size:20px;margin-bottom:12px;transform:translateZ(30px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;transform:translateZ(18px)}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px;background:var(--bg)}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:30px}
+.contact{background:var(--hero);color:#F4EEFF;text-align:center}
+.contact h2{margin-inline:auto;max-width:640px}
+.contact .lead{margin:0 auto 28px;color:#DCCFF5}
+.links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{padding:24px;text-align:center;color:var(--muted);font-size:14px}
+#progress{position:fixed;left:0;top:0;height:3px;width:100%;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#B794FF,#FF7A59);z-index:50}
+.top button{background:none;border:1.5px solid #8a74b8;color:#F4EEFF;border-radius:999px;padding:4px 14px;font:500 14px "Instrument Sans",sans-serif;cursor:pointer}
+.top nav{align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.pl{margin:0;color:var(--muted);transform:translateZ(18px)}
+.btn.s:hover{background:rgba(255,255,255,.1)}
+.hero{background-color:#1A0B2E}
+.btn.p:hover{box-shadow:0 8px 24px rgba(242,178,58,.35)}
+.hi{font:600 clamp(16px,2vw,20px) "Instrument Sans",sans-serif;color:#FFB59E;margin-bottom:10px;opacity:0;animation:rise .8s forwards}
+.heroText h1.name span{background:linear-gradient(100deg,#fff 0%,#FFD2B8 28%,#FF8A6B 52%,#C79BFF 78%,#fff 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(255,120,100,.35));padding-bottom:.06em;animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards,shimmer 7s linear infinite}
+@keyframes shimmer{to{background-position:-220% center}}
+.role{font:500 clamp(18px,2.6vw,26px) "Bricolage Grotesque",sans-serif;margin-top:18px;color:#E6D9FF;opacity:0;animation:rise .9s .35s cubic-bezier(.2,.8,.2,1) forwards}
+@media (max-width:820px){.about,.fun{grid-template-columns:1fr}.top nav{gap:12px;font-size:14px}.row{grid-template-columns:1fr}.row.h{display:none}section{padding:68px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.heroText h1 span,.heroText p,.btns{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<header class="hero" id="top">
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div class="top"><b>Shubham Kumar</b><nav aria-label="Sections"><a href="#bd">BD journey</a><a href="#plan">30-day plan</a><a href="#work">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a><button type="button" id="themeBtn" aria-label="Switch light or dark theme">Theme</button></nav></div>
+  <div class="heroText">
+    <div class="hi">Hello, I’m</div><h1 class="name"><span>Shubham</span><span>Kumar</span></h1><div class="role">Fixing problems. Now winning customers.</div>
+    <p>Technical support professional with a BCA and hands-on L1/L2 experience, moving into business development in Noida.</p>
+    <div class="btns"><a class="btn p" href="#contact">Get in touch</a><a class="btn s" href="#bd">See how support becomes sales</a><a class="btn s" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+  <div class="hint">Move your pointer to spin the network</div>
+</header>
+
+<main>
+<section class="sec" id="about"><div class="wrap about">
+  <div>
+    <h2>I listen first, then solve.</h2>
+    <p class="lead">I have spent my career diagnosing software and API issues, logging tickets within SLAs, and helping people by phone and email. I write clear resolution guides and stay calm when a customer is stuck. Business development uses the same habits: understand the problem, explain the answer, follow up.</p>
+  </div>
+  <div class="facts">
+    <div class="fact"><small>Based in</small>Noida, Uttar Pradesh</div>
+    <div class="fact"><small>Education</small>BCA, Maharaja Agrasen Himalayan Garhwal University</div>
+    <div class="fact"><small>Latest role</small>Telesales &amp; Process Executive, Cogent E Services</div>
+  </div>
+</div></section>
+
+<section class="sec bd" id="bd"><div class="wrap">
+  <h2>What a Business Development Executive does</h2>
+  <p class="lead">A BDE finds new customers and grows revenue. Every deal moves through a funnel. Select a stage to see what happens there and what I already bring to it.</p>
+  <div class="fun">
+    <div class="stack" role="group" aria-label="Sales funnel stages" id="stack"></div>
+    <div class="panel" id="panel" aria-live="polite"></div>
+  </div>
+  <div class="map">
+    <div class="row h"><div>What a BDE does</div><div>What I already do</div></div>
+    <div class="row"><div>Discovers the customer’s real problem</div><div>Diagnoses user issues by phone and applies root cause analysis</div></div>
+    <div class="row"><div>Handles objections calmly</div><div>Resolves booking and account queries for frustrated callers</div></div>
+    <div class="row"><div>Follows up and records every touchpoint</div><div>Logs interactions in CRM platforms and meets response SLAs</div></div>
+    <div class="row"><div>Explains a product in plain language</div><div>Guides customers through services and writes step-by-step resolution guides</div></div>
+    <div class="row"><div>Speaks to technical buyers</div><div>Works with Java, REST APIs, SQL and MongoDB, so IT and software clients are familiar ground</div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="plan"><div class="wrap">
+  <h2>My first 30 days as a BDE</h2>
+  <p class="lead">A new hire who arrives with a plan ramps up faster. This is how I would spend the first month.</p>
+  <div class="cards">
+    <div class="card"><h3>Week 1: Learn</h3><p class="pl">Study the product, the pricing and the best customers. Sit in on calls, read past deals and learn why customers said yes or no.</p></div>
+    <div class="card"><h3>Week 2: Prepare</h3><p class="pl">Build a target list of 50 companies, write email and call scripts, and set up a clean CRM routine.</p></div>
+    <div class="card"><h3>Weeks 3-4: Reach out</h3><p class="pl">Start daily calls, emails and LinkedIn messages. Log every touchpoint and follow up at least five times.</p></div>
+    <div class="card"><h3>Day 30: Review</h3><p class="pl">Share my numbers with my manager: calls, meetings booked and what worked. Then adjust the plan.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="work"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="tl">
+    <div class="job"><h3>Telesales &amp; Process Executive</h3><div class="meta">Cogent E Services (Tata 1mg process) · Mar 2026 – Oct 2026</div>
+      <ul><li>Delivered frontline customer support, handling queries by phone and guiding customers through health service bookings and portal navigation.</li>
+      <li>Resolved client technical queries, system booking issues and account inquiries over telephone and CRM channels.</li>
+      <li>Logged detailed customer interaction tickets and tracked data in CRM platforms while meeting response SLAs.</li></ul></div>
+    <div class="job"><h3>IT Support &amp; Web Development Intern</h3><div class="meta">Silverwink IT Solutions · Sep 2024 – Jan 2025</div>
+      <ul><li>Provided L1/L2 technical support and troubleshooting for web applications built with Java, Spring Boot, React.js, Node.js and MongoDB.</li>
+      <li>Diagnosed and resolved frontend and backend API integration issues, keeping user workflows and system performance uninterrupted.</li>
+      <li>Managed MongoDB queries and CRUD operations to resolve data inconsistency reports and support application maintenance.</li>
+      <li>Used Git/GitHub for version control, software updates, deployment verification and tracking technical issues.</li>
+      <li>Documented system workflows, common issues and step-by-step resolution guides for team members and internal users.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="sec" id="skills" style="padding-top:0"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="cards" id="cards">
+    <div class="card"><h3>Technical support</h3><div class="chips"><span>L1/L2 support</span><span>Troubleshooting</span><span>Root cause analysis</span><span>Incident logging</span><span>Ticket tracking</span><span>SLA adherence</span><span>User training</span></div></div>
+    <div class="card"><h3>Systems and tools</h3><div class="chips"><span>Windows</span><span>System configuration</span><span>CRM platforms</span><span>MS Office</span><span>Git/GitHub</span></div></div>
+    <div class="card"><h3>Web and programming</h3><div class="chips"><span>Java</span><span>Spring Boot</span><span>React.js</span><span>Node.js</span><span>HTML/CSS</span><span>REST API debugging</span></div></div>
+    <div class="card"><h3>Databases</h3><div class="chips"><span>MongoDB</span><span>SQL queries</span><span>CRUD operations</span></div></div>
+    <div class="card"><h3>Professional</h3><div class="chips"><span>Customer service</span><span>Written and verbal communication</span><span>Problem-solving</span><span>Documentation</span><span>Teamwork</span></div></div>
+  </div>
+  <div class="edu">
+    <div class="fact"><small>2021 – 2024</small><b>Bachelor of Computer Applications</b><br>Maharaja Agrasen Himalayan Garhwal University</div>
+    <div class="fact"><small>2019 – 2020</small><b>Intermediate (Science)</b><br>K.L. Janta Inter College, Deoband</div>
+  </div>
+</div></section>
+
+<section class="sec contact" id="contact"><div class="wrap">
+  <h2>Let’s talk about your next customer.</h2>
+  <p class="lead">I am open to business development and technical support roles in Noida and nearby.</p>
+  <div class="links"><a class="btn p" href="mailto:workwithshub111@gmail.com">workwithshub111@gmail.com</a><a class="btn s" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn s" href="tel:+919149327147">+91 91493 27147</a></div>
+</div></section>
+</main>
+<footer>© Shubham Kumar</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var canvas=document.getElementById("stage"),hero=document.querySelector(".hero");
+  var renderer;
+  try{renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});}catch(e){canvas.style.display="none";return;}
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  var scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(45,1,.1,60);
+  camera.position.set(0,.6,10.5);
+  var group=new THREE.Group();scene.add(group);
+  var H=6,R0=2.7,R1=.32;
+  function rad(t){return R1+(R0-R1)*Math.pow(1-t,1.35);}
+  function yAt(t){return H/2-t*H;}
+  var N=window.innerWidth<700?1400:3200;
+  var T=new Float32Array(N),A=new Float32Array(N),O=new Float32Array(N),S=new Float32Array(N),W=new Float32Array(N);
+  var pos=new Float32Array(N*3),col=new Float32Array(N*3);
+  for(var i=0;i<N;i++){T[i]=Math.random();A[i]=Math.random()*6.283;O[i]=.5+.5*Math.random();S[i]=.035+Math.random()*.06;W[i]=.4+Math.random()*.9;}
+  var g=new THREE.BufferGeometry();
+  g.setAttribute("position",new THREE.BufferAttribute(pos,3));
+  g.setAttribute("color",new THREE.BufferAttribute(col,3));
+  var pts=new THREE.Points(g,new THREE.PointsMaterial({size:.055,vertexColors:true,transparent:true,opacity:.95,blending:THREE.AdditiveBlending,depthWrite:false}));
+  group.add(pts);
+  var rings=[];
+  for(var k=0;k<6;k++){
+    var t=k/5*.98+.01;
+    var m=new THREE.Mesh(new THREE.TorusGeometry(rad(t),.011,8,120),new THREE.MeshBasicMaterial({color:0x9fb6e6,transparent:true,opacity:.28}));
+    m.rotation.x=Math.PI/2;m.position.y=yAt(t);group.add(m);rings.push(m);
+  }
+  var gem=new THREE.Mesh(new THREE.OctahedronGeometry(.34,0),new THREE.MeshBasicMaterial({color:0xF2B23A,wireframe:true}));
+  gem.position.y=yAt(1)-.7;group.add(gem);
+  function fill(dt){
+    for(var i=0;i<N;i++){
+      T[i]+=S[i]*dt;if(T[i]>1){T[i]=0;}
+      A[i]+=W[i]*dt*(1+T[i]*2.2);
+      var t=T[i],r=rad(t)*O[i];
+      pos[i*3]=Math.cos(A[i])*r;pos[i*3+1]=yAt(t);pos[i*3+2]=Math.sin(A[i])*r;
+      var c=t*t;
+      col[i*3]=.30+.65*c;col[i*3+1]=.79-.09*c;col[i*3+2]=.75-.52*c;
+    }
+    g.attributes.position.needsUpdate=true;g.attributes.color.needsUpdate=true;
+  }
+  var tx=0,ty=0,px=0,py=0;
+  hero.addEventListener("pointermove",function(e){var r=hero.getBoundingClientRect();px=((e.clientX-r.left)/r.width-.5);py=((e.clientY-r.top)/r.height-.5);});
+  function size(){var w=hero.clientWidth,h=hero.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
+    if(w<820){camera.position.set(0,2.2,13.5);group.position.set(0,1.6,0);}else{camera.position.set(0,.6,10.5);group.position.set(2.3,0,0);}
+    camera.lookAt(group.position.x*.3,group.position.y*.5,0);camera.updateProjectionMatrix();}
+  size();window.addEventListener("resize",size);
+  var visible=true,last=performance.now(),spin=0;
+  new IntersectionObserver(function(e){visible=e[0].isIntersecting;}).observe(hero);
+  function frame(now){
+    requestAnimationFrame(frame);
+    if(!visible)return;
+    var dt=Math.min((now-last)/1000,.05);last=now;
+    fill(dt);
+    spin+=dt*.25;
+    tx+=(px*1.1-tx)*.05;ty+=(py*.5-ty)*.05;
+    group.rotation.y=spin+tx;
+    group.rotation.x=ty+Math.min(window.scrollY/900,.5);
+    gem.rotation.y+=dt*1.6;gem.rotation.x+=dt*.9;
+    for(var k=0;k<rings.length;k++)rings[k].rotation.z+=dt*(k%2?.3:-.3);
+    renderer.render(scene,camera);
+  }
+  if(reduce){fill(.5);renderer.render(scene,camera);}else{requestAnimationFrame(frame);}
+})();
+
+/* funnel explainer */
+(function(){
+  var stages=[
+   ["Lead","A possible customer found on LinkedIn, in a database or through a referral.","Finding who needs help and why. My support work taught me to spot a real problem quickly.","#CDBBFF","100%"],
+   ["Qualified","You check need, budget, authority and timing before spending more time.","Asking clear questions and listening. I do this on every support call.","#BDA6FF","86%"],
+   ["Demo","You show how the product solves their specific problem.","Explaining technical things simply, backed by written guides I have made for other users.","#CF9EEA","72%"],
+   ["Proposal","A clear offer with price, scope and next steps.","Documentation habits: accurate, structured and easy to follow.","#EE9FC0","58%"],
+   ["Negotiation","Agreeing on terms and handling the last objections.","Staying calm with upset customers and finding a fair solution inside the rules.","#FF9578","44%"],
+   ["Closed deal","The customer signs and moves to onboarding.","Following through and tracking every step in a CRM so nothing is dropped.","#FF7A59","30%"]
+  ];
+  var stack=document.getElementById("stack"),panel=document.getElementById("panel"),btns=[];
+  function show(i){
+    btns.forEach(function(b,j){b.setAttribute("aria-pressed",j===i?"true":"false");});
+    var s=stages[i];
+    panel.innerHTML="<h3></h3><p></p><p class='mine'><b>What I bring:</b> <span></span></p>";
+    panel.querySelector("h3").textContent=s[0];
+    panel.querySelector("p").textContent=s[1];
+    panel.querySelector("span").textContent=s[2];
+  }
+  stages.forEach(function(s,i){
+    var b=document.createElement("button");b.type="button";b.className="stage";b.textContent=s[0];
+    b.style.setProperty("--c",s[3]);b.style.setProperty("--w",s[4]);
+    b.addEventListener("click",function(){show(i);});stack.appendChild(b);btns.push(b);
+  });
+  show(0);
+})();
+
+/* scroll progress and theme toggle */
+(function(){
+  var bar=document.getElementById("progress");
+  function upd(){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.transform="scaleX("+(h>0?Math.min(window.scrollY/h,1):0)+")";}
+  window.addEventListener("scroll",upd,{passive:true});upd();
+  document.getElementById("themeBtn").addEventListener("click",function(){
+    var root=document.documentElement,cur=root.getAttribute("data-theme");
+    if(!cur)cur=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+    root.setAttribute("data-theme",cur==="dark"?"light":"dark");
+  });
+})();
+
+/* 3D tilt on skill cards */
+(function(){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  document.querySelectorAll(".card").forEach(function(c){
+    c.addEventListener("pointermove",function(e){
+      var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      c.style.transform="rotateY("+(x*14)+"deg) rotateX("+(-y*14)+"deg) translateZ(8px)";
+    });
+    c.addEventListener("pointerleave",function(){c.style.transform="";});
+  });
+})();
+</script>
+</body>
+</html>
